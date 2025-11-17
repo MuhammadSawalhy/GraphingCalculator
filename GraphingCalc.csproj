@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1401EF03-8C3D-485A-BCEA-7D31CE357C45}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Graphing</RootNamespace>
+    <AssemblyName>GraphingCalc</AssemblyName>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>installer\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>4472FAE5DBF3A577FE67F9F513BCA966B02CCEA3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>GraphingCalc_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Properties\icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Graphing.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\Mohammed\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Loyc.Collections, Version=2.4.3.0, Culture=neutral, PublicKeyToken=b1460dff8a28f7a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Loyc.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Loyc.Essentials, Version=2.4.3.0, Culture=neutral, PublicKeyToken=b1460dff8a28f7a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Loyc.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="Loyc.Syntax, Version=2.4.3.0, Culture=neutral, PublicKeyToken=b1460dff8a28f7a7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Loyc.Syntax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GraphingCode\Lists\GList.cs" />
+    <Compile Include="GraphingCode\Lists\GraphObjectsList.cs" />
+    <Compile Include="GraphingCode\Lists\NumbersList.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\AuxiliaryPointsArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\ObjectArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\ObjectsArray.cs" />
+    <Compile Include="GraphingCode\Calc\Variable.cs" />
+    <Compile Include="GraphingCode\DirectBitmap.cs" />
+    <Compile Include="GraphingCode\Controls\Edit_Pen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\Edit_Pen.Designer.cs">
+      <DependentUpon>Edit_Pen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\GraphControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\GraphControl.Designer.cs">
+      <DependentUpon>GraphControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\PointForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\PointForm.Designer.cs">
+      <DependentUpon>PointForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\SketchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\SketchControl.Designer.cs">
+      <DependentUpon>SketchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\SliderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\SliderControl.Designer.cs">
+      <DependentUpon>SliderControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\Slider_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphingCode\Controls\Slider_Form.Designer.cs">
+      <DependentUpon>Slider_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingCode\Objects\Functions\ParametricFunc.cs" />
+    <Compile Include="GraphingCode\Objects\Functions\XYFunction.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\Curve.cs" />
+    <Compile Include="InputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputForm.Designer.cs">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathPackage\CalculationSetting.cs" />
+    <Compile Include="Tab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tab.Designer.cs">
+      <DependentUpon>Tab.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphingCode\MainFunctions.cs" />
+    <Compile Include="GraphingCode\CalcRange.cs" />
+    <Compile Include="GraphingCode\Objects\Functions\Functions.cs" />
+    <Compile Include="GraphingCode\GraphObject.cs" />
+    <Compile Include="GraphingCode\Objects\Functions\XFunctions.cs" />
+    <Compile Include="GraphingCode\GraphSetting.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\Polygone.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\Line.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\TwoPCircle.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\TwoPSemiCircle2.cs" />
+    <Compile Include="GraphingCode\Objects\Points\AuxiliaryPoints.cs" />
+    <Compile Include="GraphingCode\Objects\Points\Points.cs" />
+    <Compile Include="GraphingCode\Objects\Slider.cs" />
+    <Compile Include="GraphingCode\Objects\Text.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MathPackage\CalculateDerivative.cs" />
+    <Compile Include="MathPackage\Clac\Funcs.cs" />
+    <Compile Include="MathPackage\Clac\Constant.cs" />
+    <Compile Include="MathPackage\Expression.cs" />
+    <Compile Include="MathPackage\Main.cs" />
+    <Compile Include="MathPackage\Node.cs" />
+    <Compile Include="MathPackage\Operations\Abs.cs" />
+    <Compile Include="MathPackage\Operations\Binary\BAnd.cs" />
+    <Compile Include="MathPackage\Operations\Binary\Binary.cs" />
+    <Compile Include="MathPackage\Operations\Binary\BNot.cs" />
+    <Compile Include="MathPackage\Operations\Binary\BOr.cs" />
+    <Compile Include="MathPackage\Operations\Binary\BXor.cs" />
+    <Compile Include="MathPackage\Operations\Binary\NullCoalesce.cs" />
+    <Compile Include="MathPackage\Operations\Binary\ShiftLeft.cs" />
+    <Compile Include="MathPackage\Operations\Binary\ShiftRight.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\And.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\Boolean.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\Equal.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\GreaterEqual.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\GreaterThan.cs" />
+    <Compile Include="MathPackage\Operations\If.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\In.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\LowerEqual.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\LowerThan.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\Not.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\NotEqual.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\Or.cs" />
+    <Compile Include="MathPackage\Operations\Boolean\Xor.cs" />
+    <Compile Include="MathPackage\Operations\Ceil.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Clamp.cs" />
+    <Compile Include="MathPackage\Operations\Exp.cs" />
+    <Compile Include="MathPackage\Operations\Floor.cs" />
+    <Compile Include="MathPackage\Operations\Sum.cs" />
+    <Compile Include="MathPackage\Operations\Function.cs" />
+    <Compile Include="MathPackage\Operations\Ln.cs" />
+    <Compile Include="MathPackage\Operations\Log.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Add.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\C.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Divide.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Factorial.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Mod.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Multiply.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\P.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Power.cs" />
+    <Compile Include="MathPackage\Operations\Main algorisms\Subtract.cs" />
+    <Compile Include="MathPackage\Operations\Max.cs" />
+    <Compile Include="MathPackage\Operations\Min.cs" />
+    <Compile Include="MathPackage\Operations\Neg.cs" />
+    <Compile Include="MathPackage\Operations\Random.cs" />
+    <Compile Include="MathPackage\Operations\Root.cs" />
+    <Compile Include="MathPackage\Operations\Sign.cs" />
+    <Compile Include="MathPackage\Operations\Sqrt.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Acos.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Asin.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\ATan.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Atan2.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Cos.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Cot.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Csc.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Sec.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Sin.cs" />
+    <Compile Include="MathPackage\Operations\Traingle ratios\Tan.cs" />
+    <Compile Include="MathPackage\SuperCalculator\Calculate.cs" />
+    <Compile Include="MathPackage\SuperCalculator\Number.cs" />
+    <Compile Include="MathPackage\Transformer.cs" />
+    <Compile Include="MathPackage\Clac\Variable.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GraphingCode\Controls\Edit_Pen.resx">
+      <DependentUpon>Edit_Pen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingCode\Controls\GraphControl.resx">
+      <DependentUpon>GraphControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingCode\Controls\PointForm.resx">
+      <DependentUpon>PointForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingCode\Controls\SketchControl.resx">
+      <DependentUpon>SketchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingCode\Controls\SliderControl.resx">
+      <DependentUpon>SliderControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphingCode\Controls\Slider_Form.resx">
+      <DependentUpon>Slider_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputForm.resx">
+      <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tab.resx">
+      <DependentUpon>Tab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\error.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GraphingCode\Objects Arrays\CurvePointsArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\XFuncArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\PenArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\PointsArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\PointsDependantArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\SliderArray.cs" />
+    <Compile Include="GraphingCode\Objects Arrays\TextArray.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GraphingCode\Objects\Coordinates.cs" />
+    <Compile Include="GraphingCode\Objects\Pens.cs" />
+    <Compile Include="GraphingCode\Objects\Sketch.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GraphingCode\Objects\PointsDependant\Angle.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\Distance.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\PointsDependant.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\TwoPCircle2.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\TwoPSemiCircle.cs" />
+    <Compile Include="GraphingCode\Objects\PointsDependant\ThreePCircle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-back-96 copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-forward-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase2_a4u_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase1_J5I_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencursor_M0F_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_ball_point_pen_64_S3d_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_push_pin_6_82y_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Loyc.Collections.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Loyc.Essentials.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Loyc.Syntax.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
